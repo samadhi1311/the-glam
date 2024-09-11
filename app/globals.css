@@ -2,26 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display:wght@500&display=swap');
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Inter', sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+h1,
+h2,
+h3 {
+	font-family: 'Playfair Display', serif;
+	font-weight: 500;
+}
+
+button,
+a {
+	transition: all 0.3s ease;
+}
+
+/* Use scaleZ(1) to use GPU rendering */
+button {
+	transform: scale(1) scaleZ(1);
+}
+
+button:hover {
+	transform: scale(1.05) scaleZ(1.01);
 }
