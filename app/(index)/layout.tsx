@@ -1,6 +1,6 @@
 'use client';
 
-import MenuButton from '@/components/ui/menu-button';
+import MenuButton from '@/components/menu-button';
 import { ReactLenis } from '@studio-freight/react-lenis';
 import { motion } from 'motion/react';
 
