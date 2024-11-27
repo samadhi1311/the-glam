@@ -18,7 +18,10 @@ export default function Footer() {
 		<div className='relative h-[80vh]' style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}>
 			<div className='relative -top-[100vh] h-[calc(100vh+80vh)]'>
 				<div className='sticky top-[calc(100vh-80vh)] h-[80vh]'>
-					<footer className='flex h-full w-full flex-col items-center justify-around bg-background'>
+					<footer className='relative z-30 flex h-full w-full flex-col items-center justify-around bg-beige-light'>
+						<div className='absolute bottom-0 left-0 -z-10'>
+							<img src='/flowers/elegant-flowers-tl.svg' alt='Elegant Flowers' className='h-full max-h-[30vh] origin-center -scale-y-100 opacity-50' />
+						</div>
 						<div>
 							<H1 className='tracking-widest'>THE GLAM</H1>
 						</div>
