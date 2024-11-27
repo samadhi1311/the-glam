@@ -3,8 +3,8 @@
 import { useState } from 'react';
 import { FaBars, FaX } from 'react-icons/fa6';
 import { AnimatePresence, motion } from 'motion/react';
-import Navigation from './navigation';
-import { TextSwitch } from '../animations/animations';
+import Navigation from '@/components/navigation';
+import { TextSwitch } from './animations/animations';
 
 export default function MenuButton() {
 	const [isOpen, setIsOpen] = useState(false);
