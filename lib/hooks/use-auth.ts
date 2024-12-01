@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { User, onAuthStateChanged, signInWithEmailAndPassword, signOut, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import { User, onAuthStateChanged, signInWithEmailAndPassword, signOut, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, sendPasswordResetEmail } from 'firebase/auth';
 import { FirebaseError } from 'firebase/app';
 import { auth } from '@/firebase.config';
 
@@ -32,6 +32,7 @@ const useAuth = () => {
 	}, []);
 
 	const login = async (email: string, password: string) => {
+		setAuthLoading(true);
 		try {
 			const userCredentials = await signInWithEmailAndPassword(auth, email, password);
 			return userCredentials.user;
@@ -40,10 +41,13 @@ const useAuth = () => {
 				generateAuthErrorMessages(error);
 			}
 			console.error(error);
+		} finally {
+			setAuthLoading(false);
 		}
 	};
 
 	const logout = async () => {
+		setAuthLoading(true);
 		try {
 			await signOut(auth);
 		} catch (error) {
@@ -51,10 +55,13 @@ const useAuth = () => {
 				generateAuthErrorMessages(error);
 			}
 			console.error(error);
+		} finally {
+			setAuthLoading(false);
 		}
 	};
 
 	const signup = async (email: string, password: string) => {
+		setAuthLoading(true);
 		try {
 			const userCredentials = await createUserWithEmailAndPassword(auth, email, password);
 			return userCredentials.user;
@@ -63,10 +70,13 @@ const useAuth = () => {
 				generateAuthErrorMessages(error);
 			}
 			console.error(error);
+		} finally {
+			setAuthLoading(false);
 		}
 	};
 
 	const signInWithGoogle = async () => {
+		setAuthLoading(true);
 		try {
 			const provider = new GoogleAuthProvider();
 			const userCredentials = await signInWithPopup(auth, provider);
@@ -76,10 +86,23 @@ const useAuth = () => {
 				generateAuthErrorMessages(error);
 			}
 			console.error(error);
+		} finally {
+			setAuthLoading(false);
 		}
 	};
 
-	return { user, authLoading, login, logout, signup, signInWithGoogle };
+	const passwordReset = async (email: string) => {
+		try {
+			await sendPasswordResetEmail(auth, email);
+		} catch (error) {
+			if (error instanceof FirebaseError) {
+				generateAuthErrorMessages(error);
+			}
+			console.error(error);
+		}
+	};
+
+	return { user, authLoading, login, logout, signup, signInWithGoogle, passwordReset };
 };
 
 export { useAuth };
