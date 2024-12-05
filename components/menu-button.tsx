@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { FaBars, FaX } from 'react-icons/fa6';
+import { MenuIcon, XIcon } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
 import Navigation from '@/components/navigation';
 import { TextSwitch } from './animations/animations';
@@ -11,17 +11,17 @@ export default function MenuButton() {
 	return (
 		<>
 			<motion.button
-				className='fixed left-4 top-4 z-[100] font-medium transition-colors duration-100 hover:bg-foreground/10 md:left-8 md:top-8'
+				className='fixed left-4 top-4 z-[100] font-medium transition-all duration-300 hover:bg-foreground/10 md:left-8 md:top-8'
 				onClick={() => setIsOpen(!isOpen)}
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 0.5, delay: 1 }}>
 				<div className='relative flex h-10 w-32 items-center overflow-hidden px-6 py-2 uppercase tracking-widest'>
 					<motion.span className='absolute size-4' variants={TextSwitch} animate={isOpen ? 'open' : 'closed'}>
-						<FaX />
+						<XIcon className='size-4' />
 					</motion.span>
 					<motion.span className='absolute size-4' variants={TextSwitch} animate={!isOpen ? 'open' : 'closed'}>
-						<FaBars />
+						<MenuIcon className='size-4' />
 					</motion.span>
 					<span className='ml-6'>MENU</span>
 				</div>
