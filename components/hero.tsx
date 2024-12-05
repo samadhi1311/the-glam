@@ -3,7 +3,7 @@
 import { motion, stagger, useAnimate } from 'motion/react';
 import { H1, P1 } from '@/components/ui/typography';
 import { useEffect } from 'react';
-import { HiOutlineSparkles } from 'react-icons/hi2';
+import { SparklesIcon } from 'lucide-react';
 
 export default function Hero() {
 	const [scope, animate] = useAnimate();
@@ -66,7 +66,7 @@ export default function Hero() {
 				</H1>
 				<P1 className='the-glam-slogan flex items-start pt-4 font-semibold uppercase tracking-widest text-foreground opacity-0'>
 					Handmade Luxury Accessories
-					<HiOutlineSparkles className='ml-1 size-4' />
+					<SparklesIcon className='ml-1 size-4' />
 				</P1>
 			</div>
 		</main>
