@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function Footer() {
 	const MenuItem = ({ title, url }: { title: string; url: string }) => {
 		return (
-			<li className='h-8 w-fit rounded-full underline decoration-transparent transition duration-200 hover:decoration-current'>
+			<li className='h-8 w-fit rounded-full underline decoration-transparent transition duration-300 hover:decoration-current'>
 				<Link href={url} className='flex h-8 flex-col gap-10 overflow-hidden text-lg md:gap-10'>
 					<P1>{title}</P1>
 				</Link>

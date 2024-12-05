@@ -11,20 +11,20 @@ export default function Products() {
 						<img
 							src='/catalog/gold-rings 2.jpg'
 							alt='placeholder'
-							className='aspect-video w-full rounded-lg border object-cover object-bottom contrast-125 saturate-0 filter duration-200 hover:contrast-100 hover:saturate-100'
+							className='aspect-video w-full rounded-lg border object-cover object-bottom contrast-125 saturate-0 filter duration-300 hover:contrast-100 hover:saturate-100'
 						/>
 						<div data-orientation='horizontal' role='none' className='bg-border h-[1px] w-full shrink-0'></div>
 						<img
 							src='/catalog/gold-rings.jpg'
 							alt='placeholder'
-							className='aspect-video w-full rounded-lg border object-cover object-bottom contrast-125 saturate-0 filter duration-200 hover:contrast-100 hover:saturate-100'
+							className='aspect-video w-full rounded-lg border object-cover object-bottom contrast-125 saturate-0 filter duration-300 hover:contrast-100 hover:saturate-100'
 						/>
 					</div>
 					<div className='order-3 rounded-lg border p-2'>
 						<img
 							src='/catalog/pastel pink bow.jpg'
 							alt='placeholder'
-							className='h-full w-full rounded-lg border object-cover contrast-125 saturate-0 filter duration-200 hover:contrast-100 hover:saturate-100'
+							className='h-full w-full rounded-lg border object-cover contrast-125 saturate-0 filter duration-300 hover:contrast-100 hover:saturate-100'
 						/>
 					</div>
 					<div className='order-2 -mt-6 max-w-[412px] md:order-3'>
