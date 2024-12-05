@@ -35,6 +35,9 @@ importers:
       firebase:
         specifier: ^11.0.2
         version: 11.0.2
+      lucide-react:
+        specifier: ^0.466.0
+        version: 0.466.0(react@18.3.1)
       motion:
         specifier: ^11.11.17
         version: 11.11.17(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -50,9 +53,6 @@ importers:
       react-hook-form:
         specifier: ^7.53.2
         version: 7.53.2(react@18.3.1)
-      react-icons:
-        specifier: ^5.3.0
-        version: 5.3.0(react@18.3.1)
       tailwind-merge:
         specifier: ^2.5.4
         version: 2.5.4
@@ -1568,6 +1568,11 @@ packages:
   lru-cache@10.4.3:
     resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==}
 
+  lucide-react@0.466.0:
+    resolution: {integrity: sha512-cOZBX3/VRFuwm16hPy6NiWSSOBfKaYVhzLrDc0Y/mnliP7uHLC6q2Yvb79FqzaRpcWQwOIY7xUBvZBGmyFaAkQ==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0-rc
+
   merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
@@ -1816,11 +1821,6 @@ packages:
     engines: {node: '>=18.0.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18 || ^19
-
-  react-icons@5.3.0:
-    resolution: {integrity: sha512-DnUk8aFbTyQPSkCfF8dbX6kQjXA9DktMeJqfjrg6cK9vwQVMxmcA3BfP4QoiztVmEHtwlTgLFsPuH2NskKT6eg==}
-    peerDependencies:
-      react: '*'
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
@@ -3903,6 +3903,10 @@ snapshots:
 
   lru-cache@10.4.3: {}
 
+  lucide-react@0.466.0(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+
   merge2@1.4.1: {}
 
   micromatch@4.0.8:
@@ -4138,10 +4142,6 @@ snapshots:
       scheduler: 0.23.2
 
   react-hook-form@7.53.2(react@18.3.1):
-    dependencies:
-      react: 18.3.1
-
-  react-icons@5.3.0(react@18.3.1):
     dependencies:
       react: 18.3.1
 
