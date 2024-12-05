@@ -11,12 +11,12 @@ export default function MenuButton() {
 	return (
 		<>
 			<motion.button
-				className='group fixed left-4 top-4 z-[100] font-medium transition-colors duration-100 hover:bg-foreground md:left-8 md:top-8'
+				className='fixed left-4 top-4 z-[100] font-medium transition-colors duration-100 hover:bg-foreground/10 md:left-8 md:top-8'
 				onClick={() => setIsOpen(!isOpen)}
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 0.5, delay: 1 }}>
-				<div className='relative flex h-10 w-32 items-center overflow-hidden px-6 py-2 uppercase tracking-widest group-hover:text-background'>
+				<div className='relative flex h-10 w-32 items-center overflow-hidden px-6 py-2 uppercase tracking-widest'>
 					<motion.span className='absolute size-4' variants={TextSwitch} animate={isOpen ? 'open' : 'closed'}>
 						<FaX />
 					</motion.span>
