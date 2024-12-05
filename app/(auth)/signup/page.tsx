@@ -7,7 +7,7 @@ import { PasswordInput } from '@/components/ui/password-input';
 import { Separator } from '@/components/ui/separator';
 import { H2, H3, P1, P2 } from '@/components/ui/typography';
 import { useAuth } from '@/lib/hooks/use-auth';
-import { LuLoader2, LuLogIn } from 'react-icons/lu';
+import { Loader2Icon, LogInIcon } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -45,11 +45,11 @@ export default function SignUp() {
 							<div className='mt-4 flex flex-col items-center justify-center gap-4'>
 								{authLoading ? (
 									<Button type='submit' className='flex w-fit min-w-36 items-center gap-3'>
-										<LuLoader2 className='size-4 animate-spin object-center' /> Wait
+										<Loader2Icon className='size-4 animate-spin object-center' /> Wait
 									</Button>
 								) : (
 									<Button type='submit' className='flex w-fit min-w-36 items-center gap-3' onClick={() => signup(userCredentials.email, userCredentials.password)}>
-										<LuLogIn className='size-4' /> Sign Up
+										<LogInIcon className='size-4' /> Sign Up
 									</Button>
 								)}
 								<span className='text-center text-sm'>or</span>
